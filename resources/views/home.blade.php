@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div class="container">
+<div class="container py-3">
 
     <div class="row g-5">
 
-        @foreach ($movies as $movie)
+        @foreach ($movies as $key => $movie)
 
         <div class="col-4 card">
             <div class="card-body">
@@ -21,7 +21,7 @@
                 <li class="list-group-item">Vote: {{ $movie -> vote }}</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link">Go to the page</a>
+                <a href="{{ route('show', ['id' => $key + 1]) }}" class="card-link">Go to the page</a>
             </div>
         </div>
 
