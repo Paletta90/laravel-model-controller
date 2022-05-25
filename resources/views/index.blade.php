@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,16 @@
 
     <title>Document</title>
 </head>
+
 <body>
+
+    @foreach ($movies as $item)
+        <h1>{{ $item -> title }}</h1>
+    @endforeach
     
-    <h1 class="text-primary">Ciao</h1>
     {{-- Boostrap 5 js --}}
     <script src=" {{ asset('js/app.js') }} "></script>
 
 </body>
+
 </html>
