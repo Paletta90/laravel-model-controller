@@ -9,14 +9,19 @@
     {{-- Link boostrap 5 --}}
     <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
 
-    <title>Document</title>
+    <title>@yield('title')</title>
 </head>
 
 <body>
 
-    @foreach ($movies as $item)
-        <h1>{{ $item -> title }}</h1>
-    @endforeach
+    {{-- Header --}}
+    @include('includes.header')
+
+
+    @yield('content')
+
+    {{-- Footer --}}
+    @include('includes.footer')
     
     {{-- Boostrap 5 js --}}
     <script src=" {{ asset('js/app.js') }} "></script>
